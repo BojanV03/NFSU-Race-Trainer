@@ -39,6 +39,10 @@ namespace NFS_Underground_Race_Trainer
         private void Form1_Load(object sender, EventArgs e)
         {
             races = NFSU2_Race_Data.initializeRaceData();
+            cbNumOfOpponents.SelectedIndex = 0;
+            cbRaces.SelectedIndex = 0;
+            cbReversed.SelectedIndex = 0;
+            
         }
 
         private void gameAvailable_Tick(object sender, EventArgs e)
@@ -46,17 +50,11 @@ namespace NFS_Underground_Race_Trainer
             NFSU2 = Process.GetProcessesByName("speed");
             if(NFSU2.Length == 1)
             {
-                isGameAvailable = true;
-                lblAvailable.Text = "Game is running";
-                updateCheats.Enabled = true;
-                lblAvailable.ForeColor = Color.LightGreen;
+                activateTrainer(true);
             }
             else
             {
-                isGameAvailable = false;
-                lblAvailable.Text = "Game unavailable";
-                updateCheats.Enabled = false;
-                lblAvailable.ForeColor = Color.Red;
+                activateTrainer(false);
             }
         }
 
@@ -79,8 +77,33 @@ namespace NFS_Underground_Race_Trainer
                     lblTrainerActivated.ForeColor = Color.Red;
                 }
             }
+            else
+                MessageBox.Show("Make sure you have the game running!");
         }
 
+        private void activateTrainer(bool isAvailable)
+        {
+            if(isAvailable)
+            {
+                lblAvailable.Text = "Game is running";
+                lblAvailable.ForeColor = Color.LightGreen;
+                lblTrainerActivated.Visible = true;
+            }
+            else
+            {
+                lblAvailable.Text = "Game unavailable";
+                lblAvailable.ForeColor = Color.Red;
+                lblTrainerActivated.Visible = false;
+            }
+            isGameAvailable = isAvailable;
+            cbReversed.Enabled = isAvailable;
+            cbRaces.Enabled = isAvailable;
+            chbLapCount.Enabled = isAvailable;
+            cbNumOfOpponents.Enabled = isAvailable;
+            updateCheats.Enabled = isAvailable;
+            numLapCount.Enabled = isAvailable;
+            btnActivate.Enabled = isAvailable;
+        }
         private static int hexToDec(String hex)
         {
             return int.Parse(hex, NumberStyles.HexNumber);
@@ -102,8 +125,18 @@ namespace NFS_Underground_Race_Trainer
                 {
                     int bytesWritten;
                     byte[] valueToWrite = BitConverter.GetBytes(raceID);
-                    pointerAdress = Form1.hexToDec("0078A2E0");
-                    myMemory.Write((IntPtr)pointerAdress, valueToWrite, out bytesWritten);
+                    pointerAdress = Form1.hexToDec("004B4BCC");
+                    int[] offset = { 0 };
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offset, out bytesWritten);
+                }
+
+                if (chbLapCount.Checked)
+                {
+                    int bytesWritten;
+                    byte[] valueToWrite = BitConverter.GetBytes((int)numLapCount.Value);
+                    pointerAdress = Form1.hexToDec("004B4BCC");
+                    int[] offset = { 44 };
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offset, out bytesWritten);
                 }
                 byte reverseValue;
                 if(cbReversed.Text != "Don't Change")
@@ -115,8 +148,9 @@ namespace NFS_Underground_Race_Trainer
                         reverseValue = 1;
 
                     byte[] valueToWrite = BitConverter.GetBytes(reverseValue);
-                    pointerAdress = Form1.hexToDec("0078A2EC");
-                    myMemory.Write((IntPtr)pointerAdress, valueToWrite, out bytesWritten);
+                    int[] offset = { 12 };
+                    pointerAdress = Form1.hexToDec("004B4BCC");
+                    string writtenAdress = myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offset, out bytesWritten);
                 }
                 int opponents;
                 if(cbNumOfOpponents.Text != "Don't Change")
