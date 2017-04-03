@@ -159,17 +159,18 @@ namespace NFS_Underground_Race_Trainer
                     opponents = cbNumOfOpponents.SelectedIndex - 1;
                     byte[] valueToWrite = BitConverter.GetBytes(opponents);
                     // Circuit
-                    pointerAdress = Form1.hexToDec("00758970");
-                    myMemory.Write((IntPtr)pointerAdress, valueToWrite, out bytesWritten);
+                    int[] offsetC = { -32 };
+                    pointerAdress = Form1.hexToDec("035CF868");
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetC, out bytesWritten);
                     // Drag
-                    pointerAdress = Form1.hexToDec("00758A78");
-                    myMemory.Write((IntPtr)pointerAdress, valueToWrite, out bytesWritten);
+                    int[] offsetD = { 232 };
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetD, out bytesWritten);
                     // Sprint
-                    pointerAdress = Form1.hexToDec("00758990");
-                    myMemory.Write((IntPtr)pointerAdress, valueToWrite, out bytesWritten);
+                    int[] offsetS = { 0 };
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetS, out bytesWritten);
                     // Lap Knockout
-                    pointerAdress = Form1.hexToDec("007589B0");
-                    myMemory.Write((IntPtr)pointerAdress, valueToWrite, out bytesWritten);
+                    int[] offsetL = { 32 };
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetL, out bytesWritten);
 
                 }
             }
