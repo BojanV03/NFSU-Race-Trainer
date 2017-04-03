@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="19">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"Track"</Description>
+      <LastState Value="1106" RealAddress="0078A2E0"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Speed.exe+38A2E0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Laps"</Description>
+      <LastState Value="1" RealAddress="0078A30C"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Speed.exe+38A30C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"Circuit Opponents"</Description>
+      <LastState Value="1" RealAddress="00758970"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Speed.exe+358970</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"Drag Opponents"</Description>
+      <LastState Value="1" RealAddress="00758A78"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Speed.exe+358A78</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"Sprint Oponents"</Description>
+      <LastState Value="1" RealAddress="00758990"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Speed.exe+358990</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"LapKnockout Oponents"</Description>
+      <LastState Value="2" RealAddress="007589B0"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Speed.exe+3589B0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"Sprint Traffic Level"</Description>
+      <LastState Value="0" RealAddress="007589A8"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>Speed.exe+3589A8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"Sprint CatchUp"</Description>
+      <LastState Value="68" RealAddress="007589AF"/>
+      <VariableType>Byte</VariableType>
+      <Address>Speed.exe+3589AF</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"No description"</Description>
+      <LastState Value="0" RealAddress="00020000"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00020000</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"isReversed"</Description>
+      <LastState Value="0" RealAddress="0078A2EC"/>
+      <VariableType>Byte</VariableType>
+      <Address>0078A2EC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"TimeTrialTime 4000/s"</Description>
+      <LastState Value="14420000" Activated="1" RealAddress="0078A300"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>0078A300</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"nista?"</Description>
+      <LastState Value="0" RealAddress="0078A2F0"/>
+      <VariableType>Byte</VariableType>
+      <Address>0078A2F0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"No description"</Description>
+      <LastState Value="0" RealAddress="0078A32C"/>
+      <VariableType>Byte</VariableType>
+      <Address>0078A32C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"No description"</Description>
+      <LastState Value="1" RealAddress="0078A30C"/>
+      <VariableType>Byte</VariableType>
+      <Address>0078A30C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"2 for timeTrial"</Description>
+      <LastState Value="2" Activated="1" RealAddress="0078A2FC"/>
+      <VariableType>Byte</VariableType>
+      <Address>0078A2FC</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
