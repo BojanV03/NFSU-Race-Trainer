@@ -39,7 +39,6 @@
             this.chbLapCount = new System.Windows.Forms.CheckBox();
             this.cbReversed = new System.Windows.Forms.ComboBox();
             this.lblTrainerActivated = new System.Windows.Forms.Label();
-            this.cbNumOfOpponents = new System.Windows.Forms.ComboBox();
             this.chbTimeTrial = new System.Windows.Forms.CheckBox();
             this.numTimeHours = new System.Windows.Forms.NumericUpDown();
             this.numTimeMinutes = new System.Windows.Forms.NumericUpDown();
@@ -47,6 +46,11 @@
             this.lblHours = new System.Windows.Forms.Label();
             this.lblMinutes = new System.Windows.Forms.Label();
             this.lblSeconds = new System.Windows.Forms.Label();
+            this.lblReverse = new System.Windows.Forms.Label();
+            this.lblTrack = new System.Windows.Forms.Label();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnGithub = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numLapCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTimeHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTimeMinutes)).BeginInit();
@@ -66,7 +70,7 @@
             // btnActivate
             // 
             this.btnActivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActivate.Location = new System.Drawing.Point(41, 42);
+            this.btnActivate.Location = new System.Drawing.Point(41, 38);
             this.btnActivate.Margin = new System.Windows.Forms.Padding(2);
             this.btnActivate.Name = "btnActivate";
             this.btnActivate.Size = new System.Drawing.Size(85, 27);
@@ -133,7 +137,7 @@
             "Drift Track 6",
             "Drift Track 7",
             "Drift Track 8"});
-            this.cbRaces.Location = new System.Drawing.Point(11, 74);
+            this.cbRaces.Location = new System.Drawing.Point(12, 98);
             this.cbRaces.Margin = new System.Windows.Forms.Padding(2);
             this.cbRaces.Name = "cbRaces";
             this.cbRaces.Size = new System.Drawing.Size(160, 24);
@@ -143,7 +147,7 @@
             // numLapCount
             // 
             this.numLapCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numLapCount.Location = new System.Drawing.Point(113, 102);
+            this.numLapCount.Location = new System.Drawing.Point(114, 128);
             this.numLapCount.Margin = new System.Windows.Forms.Padding(2);
             this.numLapCount.Maximum = new decimal(new int[] {
             2147483647,
@@ -164,8 +168,8 @@
             this.chbLapCount.AutoSize = true;
             this.chbLapCount.BackColor = System.Drawing.Color.Transparent;
             this.chbLapCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbLapCount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chbLapCount.Location = new System.Drawing.Point(11, 102);
+            this.chbLapCount.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.chbLapCount.Location = new System.Drawing.Point(12, 129);
             this.chbLapCount.Margin = new System.Windows.Forms.Padding(2);
             this.chbLapCount.Name = "chbLapCount";
             this.chbLapCount.Size = new System.Drawing.Size(98, 21);
@@ -182,7 +186,7 @@
             "Don\'t Change",
             "Standard",
             "Reversed"});
-            this.cbReversed.Location = new System.Drawing.Point(11, 129);
+            this.cbReversed.Location = new System.Drawing.Point(12, 172);
             this.cbReversed.Margin = new System.Windows.Forms.Padding(2);
             this.cbReversed.Name = "cbReversed";
             this.cbReversed.Size = new System.Drawing.Size(160, 24);
@@ -201,31 +205,13 @@
             this.lblTrainerActivated.TabIndex = 6;
             this.lblTrainerActivated.Text = "Trainer is not active";
             // 
-            // cbNumOfOpponents
-            // 
-            this.cbNumOfOpponents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNumOfOpponents.Enabled = false;
-            this.cbNumOfOpponents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNumOfOpponents.FormattingEnabled = true;
-            this.cbNumOfOpponents.Items.AddRange(new object[] {
-            "Don\'t Change",
-            "0 opponents",
-            "1 opponent",
-            "2 opponents",
-            "3 opponents"});
-            this.cbNumOfOpponents.Location = new System.Drawing.Point(10, 157);
-            this.cbNumOfOpponents.Margin = new System.Windows.Forms.Padding(2);
-            this.cbNumOfOpponents.Name = "cbNumOfOpponents";
-            this.cbNumOfOpponents.Size = new System.Drawing.Size(160, 24);
-            this.cbNumOfOpponents.TabIndex = 7;
-            // 
             // chbTimeTrial
             // 
             this.chbTimeTrial.AutoSize = true;
             this.chbTimeTrial.BackColor = System.Drawing.Color.Transparent;
             this.chbTimeTrial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbTimeTrial.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.chbTimeTrial.Location = new System.Drawing.Point(13, 187);
+            this.chbTimeTrial.Location = new System.Drawing.Point(12, 201);
             this.chbTimeTrial.Name = "chbTimeTrial";
             this.chbTimeTrial.Size = new System.Drawing.Size(90, 21);
             this.chbTimeTrial.TabIndex = 8;
@@ -236,7 +222,7 @@
             // numTimeHours
             // 
             this.numTimeHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimeHours.Location = new System.Drawing.Point(11, 228);
+            this.numTimeHours.Location = new System.Drawing.Point(12, 242);
             this.numTimeHours.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -254,7 +240,7 @@
             // numTimeMinutes
             // 
             this.numTimeMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimeMinutes.Location = new System.Drawing.Point(68, 228);
+            this.numTimeMinutes.Location = new System.Drawing.Point(69, 242);
             this.numTimeMinutes.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -272,7 +258,7 @@
             // numTimeSeconds
             // 
             this.numTimeSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimeSeconds.Location = new System.Drawing.Point(122, 228);
+            this.numTimeSeconds.Location = new System.Drawing.Point(123, 242);
             this.numTimeSeconds.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -293,7 +279,7 @@
             this.lblHours.BackColor = System.Drawing.Color.Transparent;
             this.lblHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHours.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblHours.Location = new System.Drawing.Point(10, 210);
+            this.lblHours.Location = new System.Drawing.Point(11, 224);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(41, 15);
             this.lblHours.TabIndex = 12;
@@ -305,7 +291,7 @@
             this.lblMinutes.BackColor = System.Drawing.Color.Transparent;
             this.lblMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinutes.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblMinutes.Location = new System.Drawing.Point(65, 211);
+            this.lblMinutes.Location = new System.Drawing.Point(66, 225);
             this.lblMinutes.Name = "lblMinutes";
             this.lblMinutes.Size = new System.Drawing.Size(51, 15);
             this.lblMinutes.TabIndex = 13;
@@ -317,11 +303,66 @@
             this.lblSeconds.BackColor = System.Drawing.Color.Transparent;
             this.lblSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeconds.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSeconds.Location = new System.Drawing.Point(119, 211);
+            this.lblSeconds.Location = new System.Drawing.Point(120, 225);
             this.lblSeconds.Name = "lblSeconds";
             this.lblSeconds.Size = new System.Drawing.Size(53, 15);
             this.lblSeconds.TabIndex = 14;
             this.lblSeconds.Text = "seconds";
+            // 
+            // lblReverse
+            // 
+            this.lblReverse.AutoSize = true;
+            this.lblReverse.BackColor = System.Drawing.Color.Transparent;
+            this.lblReverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReverse.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblReverse.Location = new System.Drawing.Point(12, 153);
+            this.lblReverse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReverse.Name = "lblReverse";
+            this.lblReverse.Size = new System.Drawing.Size(65, 17);
+            this.lblReverse.TabIndex = 15;
+            this.lblReverse.Text = "Reverse:";
+            // 
+            // lblTrack
+            // 
+            this.lblTrack.AutoSize = true;
+            this.lblTrack.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrack.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTrack.Location = new System.Drawing.Point(11, 79);
+            this.lblTrack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTrack.Name = "lblTrack";
+            this.lblTrack.Size = new System.Drawing.Size(84, 17);
+            this.lblTrack.TabIndex = 16;
+            this.lblTrack.Text = "Set track to:";
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Location = new System.Drawing.Point(232, 242);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(75, 23);
+            this.btnAbout.TabIndex = 17;
+            this.btnAbout.Text = "About";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            // 
+            // btnGithub
+            // 
+            this.btnGithub.Location = new System.Drawing.Point(313, 242);
+            this.btnGithub.Name = "btnGithub";
+            this.btnGithub.Size = new System.Drawing.Size(75, 23);
+            this.btnGithub.TabIndex = 18;
+            this.btnGithub.Text = "Github";
+            this.btnGithub.UseVisualStyleBackColor = true;
+            this.btnGithub.Click += new System.EventHandler(this.btnGithub_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(394, 242);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 19;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
@@ -329,7 +370,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(481, 291);
+            this.ClientSize = new System.Drawing.Size(481, 281);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnGithub);
+            this.Controls.Add(this.btnAbout);
+            this.Controls.Add(this.lblTrack);
+            this.Controls.Add(this.lblReverse);
             this.Controls.Add(this.lblSeconds);
             this.Controls.Add(this.lblMinutes);
             this.Controls.Add(this.lblHours);
@@ -337,7 +383,6 @@
             this.Controls.Add(this.numTimeMinutes);
             this.Controls.Add(this.numTimeHours);
             this.Controls.Add(this.chbTimeTrial);
-            this.Controls.Add(this.cbNumOfOpponents);
             this.Controls.Add(this.lblTrainerActivated);
             this.Controls.Add(this.cbReversed);
             this.Controls.Add(this.chbLapCount);
@@ -371,7 +416,6 @@
         private System.Windows.Forms.CheckBox chbLapCount;
         private System.Windows.Forms.ComboBox cbReversed;
         private System.Windows.Forms.Label lblTrainerActivated;
-        private System.Windows.Forms.ComboBox cbNumOfOpponents;
         private System.Windows.Forms.CheckBox chbTimeTrial;
         private System.Windows.Forms.NumericUpDown numTimeHours;
         private System.Windows.Forms.NumericUpDown numTimeMinutes;
@@ -379,6 +423,11 @@
         private System.Windows.Forms.Label lblHours;
         private System.Windows.Forms.Label lblMinutes;
         private System.Windows.Forms.Label lblSeconds;
+        private System.Windows.Forms.Label lblReverse;
+        private System.Windows.Forms.Label lblTrack;
+        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnGithub;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

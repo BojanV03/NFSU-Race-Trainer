@@ -39,7 +39,6 @@ namespace NFS_Underground_Race_Trainer
         private void Form1_Load(object sender, EventArgs e)
         {
             races = NFSU2_Race_Data.initializeRaceData();
-            cbNumOfOpponents.SelectedIndex = 0;
             cbRaces.SelectedIndex = 0;
             cbReversed.SelectedIndex = 0;
             
@@ -102,7 +101,6 @@ namespace NFS_Underground_Race_Trainer
             cbReversed.Enabled = isAvailable;
             cbRaces.Enabled = isAvailable;
             chbLapCount.Enabled = isAvailable;
-            cbNumOfOpponents.Enabled = isAvailable;
             updateCheats.Enabled = isAvailable;
             numLapCount.Enabled = isAvailable;
             btnActivate.Enabled = isAvailable;
@@ -169,26 +167,6 @@ namespace NFS_Underground_Race_Trainer
                     pointerAdress = Form1.hexToDec("004B4BCC");
                     string writtenAdress = myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offset, out bytesWritten);
                 }
-                int opponents;
-                if(cbNumOfOpponents.Text != "Don't Change")
-                {
-                    int bytesWritten;
-                    opponents = cbNumOfOpponents.SelectedIndex - 1;
-                    byte[] valueToWrite = BitConverter.GetBytes(opponents);
-                    // Circuit
-                    int[] offsetC = { -32 };
-                    pointerAdress = Form1.hexToDec("035CF868");
-                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetC, out bytesWritten);
-                    // Drag
-                    int[] offsetD = { 232 };
-                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetD, out bytesWritten);
-                    // Sprint
-                    int[] offsetS = { 0 };
-                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetS, out bytesWritten);
-                    // Lap Knockout
-                    int[] offsetL = { 32 };
-                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetL, out bytesWritten);
-                }
             }
         }
 
@@ -230,6 +208,16 @@ namespace NFS_Underground_Race_Trainer
                 numTimeMinutes.Enabled = false;
                 numTimeSeconds.Enabled = false;
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnGithub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/BojanV03/NFSU-Race-Trainer");
         }
     }
 }
