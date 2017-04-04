@@ -62,16 +62,16 @@ namespace NFS_Underground_Race_Trainer
         {
             if (isGameAvailable && allInputsValid)
             {
-                if (isActive)
+                if (!isActive)
                 {
-                    isActive = false;
+                    isActive = true;
                     lblTrainerActivated.Text = "Trainer is active";
                     btnActivate.Text = "Deactivate";
                     lblTrainerActivated.ForeColor = Color.LightGreen;
                 }
                 else
                 {
-                    isActive = true;
+                    isActive = false;
                     lblTrainerActivated.Text = "Trainer is not active";
                     btnActivate.Text = "Activate";
                     lblTrainerActivated.ForeColor = Color.Red;
@@ -94,6 +94,9 @@ namespace NFS_Underground_Race_Trainer
                 lblAvailable.Text = "Game unavailable";
                 lblAvailable.ForeColor = Color.Red;
                 lblTrainerActivated.Visible = false;
+                numTimeHours.Enabled = false;
+                numTimeMinutes.Enabled = false;
+                numTimeSeconds.Enabled = false;
             }
             isGameAvailable = isAvailable;
             cbReversed.Enabled = isAvailable;
@@ -103,6 +106,7 @@ namespace NFS_Underground_Race_Trainer
             updateCheats.Enabled = isAvailable;
             numLapCount.Enabled = isAvailable;
             btnActivate.Enabled = isAvailable;
+            chbTimeTrial.Enabled = isAvailable;
         }
         private static int hexToDec(String hex)
         {
@@ -128,6 +132,19 @@ namespace NFS_Underground_Race_Trainer
                     pointerAdress = Form1.hexToDec("004B4BCC");
                     int[] offset = { 0 };
                     myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offset, out bytesWritten);
+                }
+                if (chbTimeTrial.Checked)
+                {
+                    int bytesWritten;
+                    byte[] valueToWrite = BitConverter.GetBytes(2);
+                    pointerAdress = Form1.hexToDec("004B4BCC");
+                    int[] offset = { 28 };
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offset, out bytesWritten);
+                    int time = 4000*(3600*(int)numTimeHours.Value + 60*(int)numTimeMinutes.Value + (int)numTimeSeconds.Value);
+                    offset[0] = 32;
+                    valueToWrite = BitConverter.GetBytes(time);
+                    myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offset, out bytesWritten);
+
                 }
 
                 if (chbLapCount.Checked)
@@ -171,7 +188,6 @@ namespace NFS_Underground_Race_Trainer
                     // Lap Knockout
                     int[] offsetL = { 32 };
                     myMemory.PointerWrite((IntPtr)pointerAdress, valueToWrite, offsetL, out bytesWritten);
-
                 }
             }
         }
@@ -198,6 +214,22 @@ namespace NFS_Underground_Race_Trainer
             MessageBox.Show("That is a race type, not a race. Selecting " + cbRaces.Items[cbRaces.SelectedIndex + 1]);
             cbRaces.SelectedIndex += 1;
             SelectedRace = (string)cbRaces.Items[cbRaces.SelectedIndex];
+        }
+
+        private void chbTimeTrial_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chbTimeTrial.Checked)
+            {
+                numTimeHours.Enabled = true;
+                numTimeMinutes.Enabled = true;
+                numTimeSeconds.Enabled = true;
+            }
+            else
+            {
+                numTimeHours.Enabled = false;
+                numTimeMinutes.Enabled = false;
+                numTimeSeconds.Enabled = false;
+            }
         }
     }
 }
