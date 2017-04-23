@@ -51,6 +51,9 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnGithub = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnFacebook = new System.Windows.Forms.Button();
+            this.btnYoutube = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numLapCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTimeHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTimeMinutes)).BeginInit();
@@ -70,10 +73,10 @@
             // btnActivate
             // 
             this.btnActivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActivate.Location = new System.Drawing.Point(41, 38);
-            this.btnActivate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActivate.Location = new System.Drawing.Point(55, 47);
+            this.btnActivate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActivate.Name = "btnActivate";
-            this.btnActivate.Size = new System.Drawing.Size(85, 27);
+            this.btnActivate.Size = new System.Drawing.Size(113, 33);
             this.btnActivate.TabIndex = 0;
             this.btnActivate.Text = "Activate";
             this.btnActivate.UseVisualStyleBackColor = true;
@@ -84,10 +87,9 @@
             this.lblAvailable.AutoSize = true;
             this.lblAvailable.BackColor = System.Drawing.Color.Transparent;
             this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailable.Location = new System.Drawing.Point(23, 4);
-            this.lblAvailable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAvailable.Location = new System.Drawing.Point(31, 5);
             this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(46, 17);
+            this.lblAvailable.Size = new System.Drawing.Size(53, 20);
             this.lblAvailable.TabIndex = 1;
             this.lblAvailable.Text = "label1";
             // 
@@ -137,18 +139,18 @@
             "Drift Track 6",
             "Drift Track 7",
             "Drift Track 8"});
-            this.cbRaces.Location = new System.Drawing.Point(12, 98);
-            this.cbRaces.Margin = new System.Windows.Forms.Padding(2);
+            this.cbRaces.Location = new System.Drawing.Point(16, 121);
+            this.cbRaces.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbRaces.Name = "cbRaces";
-            this.cbRaces.Size = new System.Drawing.Size(160, 24);
+            this.cbRaces.Size = new System.Drawing.Size(212, 28);
             this.cbRaces.TabIndex = 2;
             this.cbRaces.SelectedValueChanged += new System.EventHandler(this.cbRaces_SelectedValueChanged);
             // 
             // numLapCount
             // 
             this.numLapCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numLapCount.Location = new System.Drawing.Point(114, 128);
-            this.numLapCount.Margin = new System.Windows.Forms.Padding(2);
+            this.numLapCount.Location = new System.Drawing.Point(152, 158);
+            this.numLapCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numLapCount.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -160,7 +162,7 @@
             0,
             -2147483648});
             this.numLapCount.Name = "numLapCount";
-            this.numLapCount.Size = new System.Drawing.Size(58, 23);
+            this.numLapCount.Size = new System.Drawing.Size(77, 26);
             this.numLapCount.TabIndex = 3;
             // 
             // chbLapCount
@@ -169,10 +171,10 @@
             this.chbLapCount.BackColor = System.Drawing.Color.Transparent;
             this.chbLapCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbLapCount.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.chbLapCount.Location = new System.Drawing.Point(12, 129);
-            this.chbLapCount.Margin = new System.Windows.Forms.Padding(2);
+            this.chbLapCount.Location = new System.Drawing.Point(16, 159);
+            this.chbLapCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chbLapCount.Name = "chbLapCount";
-            this.chbLapCount.Size = new System.Drawing.Size(98, 21);
+            this.chbLapCount.Size = new System.Drawing.Size(116, 24);
             this.chbLapCount.TabIndex = 4;
             this.chbLapCount.Text = "Set laps to:";
             this.chbLapCount.UseVisualStyleBackColor = false;
@@ -186,10 +188,10 @@
             "Don\'t Change",
             "Standard",
             "Reversed"});
-            this.cbReversed.Location = new System.Drawing.Point(12, 172);
-            this.cbReversed.Margin = new System.Windows.Forms.Padding(2);
+            this.cbReversed.Location = new System.Drawing.Point(16, 212);
+            this.cbReversed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbReversed.Name = "cbReversed";
-            this.cbReversed.Size = new System.Drawing.Size(160, 24);
+            this.cbReversed.Size = new System.Drawing.Size(212, 28);
             this.cbReversed.TabIndex = 5;
             // 
             // lblTrainerActivated
@@ -198,10 +200,9 @@
             this.lblTrainerActivated.BackColor = System.Drawing.Color.Transparent;
             this.lblTrainerActivated.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrainerActivated.ForeColor = System.Drawing.Color.Red;
-            this.lblTrainerActivated.Location = new System.Drawing.Point(23, 21);
-            this.lblTrainerActivated.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTrainerActivated.Location = new System.Drawing.Point(31, 26);
             this.lblTrainerActivated.Name = "lblTrainerActivated";
-            this.lblTrainerActivated.Size = new System.Drawing.Size(133, 17);
+            this.lblTrainerActivated.Size = new System.Drawing.Size(157, 20);
             this.lblTrainerActivated.TabIndex = 6;
             this.lblTrainerActivated.Text = "Trainer is not active";
             // 
@@ -211,9 +212,10 @@
             this.chbTimeTrial.BackColor = System.Drawing.Color.Transparent;
             this.chbTimeTrial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbTimeTrial.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.chbTimeTrial.Location = new System.Drawing.Point(12, 201);
+            this.chbTimeTrial.Location = new System.Drawing.Point(16, 247);
+            this.chbTimeTrial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chbTimeTrial.Name = "chbTimeTrial";
-            this.chbTimeTrial.Size = new System.Drawing.Size(90, 21);
+            this.chbTimeTrial.Size = new System.Drawing.Size(106, 24);
             this.chbTimeTrial.TabIndex = 8;
             this.chbTimeTrial.Text = "Time Trial";
             this.chbTimeTrial.UseVisualStyleBackColor = false;
@@ -223,7 +225,8 @@
             // 
             this.numTimeHours.Enabled = false;
             this.numTimeHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimeHours.Location = new System.Drawing.Point(12, 242);
+            this.numTimeHours.Location = new System.Drawing.Point(16, 298);
+            this.numTimeHours.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numTimeHours.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -235,14 +238,15 @@
             0,
             -2147483648});
             this.numTimeHours.Name = "numTimeHours";
-            this.numTimeHours.Size = new System.Drawing.Size(51, 23);
+            this.numTimeHours.Size = new System.Drawing.Size(68, 26);
             this.numTimeHours.TabIndex = 9;
             // 
             // numTimeMinutes
             // 
             this.numTimeMinutes.Enabled = false;
             this.numTimeMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimeMinutes.Location = new System.Drawing.Point(69, 242);
+            this.numTimeMinutes.Location = new System.Drawing.Point(92, 298);
+            this.numTimeMinutes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numTimeMinutes.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -254,14 +258,15 @@
             0,
             -2147483648});
             this.numTimeMinutes.Name = "numTimeMinutes";
-            this.numTimeMinutes.Size = new System.Drawing.Size(48, 23);
+            this.numTimeMinutes.Size = new System.Drawing.Size(64, 26);
             this.numTimeMinutes.TabIndex = 10;
             // 
             // numTimeSeconds
             // 
             this.numTimeSeconds.Enabled = false;
             this.numTimeSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTimeSeconds.Location = new System.Drawing.Point(123, 242);
+            this.numTimeSeconds.Location = new System.Drawing.Point(164, 298);
+            this.numTimeSeconds.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numTimeSeconds.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -273,7 +278,7 @@
             0,
             -2147483648});
             this.numTimeSeconds.Name = "numTimeSeconds";
-            this.numTimeSeconds.Size = new System.Drawing.Size(47, 23);
+            this.numTimeSeconds.Size = new System.Drawing.Size(63, 26);
             this.numTimeSeconds.TabIndex = 11;
             // 
             // lblHours
@@ -282,9 +287,10 @@
             this.lblHours.BackColor = System.Drawing.Color.Transparent;
             this.lblHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHours.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblHours.Location = new System.Drawing.Point(11, 224);
+            this.lblHours.Location = new System.Drawing.Point(15, 276);
+            this.lblHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHours.Name = "lblHours";
-            this.lblHours.Size = new System.Drawing.Size(41, 15);
+            this.lblHours.Size = new System.Drawing.Size(50, 18);
             this.lblHours.TabIndex = 12;
             this.lblHours.Text = "hours ";
             // 
@@ -294,9 +300,10 @@
             this.lblMinutes.BackColor = System.Drawing.Color.Transparent;
             this.lblMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinutes.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblMinutes.Location = new System.Drawing.Point(66, 225);
+            this.lblMinutes.Location = new System.Drawing.Point(88, 277);
+            this.lblMinutes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMinutes.Name = "lblMinutes";
-            this.lblMinutes.Size = new System.Drawing.Size(51, 15);
+            this.lblMinutes.Size = new System.Drawing.Size(60, 18);
             this.lblMinutes.TabIndex = 13;
             this.lblMinutes.Text = "minutes";
             // 
@@ -306,9 +313,10 @@
             this.lblSeconds.BackColor = System.Drawing.Color.Transparent;
             this.lblSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeconds.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSeconds.Location = new System.Drawing.Point(120, 225);
+            this.lblSeconds.Location = new System.Drawing.Point(160, 277);
+            this.lblSeconds.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSeconds.Name = "lblSeconds";
-            this.lblSeconds.Size = new System.Drawing.Size(53, 15);
+            this.lblSeconds.Size = new System.Drawing.Size(65, 18);
             this.lblSeconds.TabIndex = 14;
             this.lblSeconds.Text = "seconds";
             // 
@@ -318,10 +326,9 @@
             this.lblReverse.BackColor = System.Drawing.Color.Transparent;
             this.lblReverse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReverse.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblReverse.Location = new System.Drawing.Point(12, 153);
-            this.lblReverse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReverse.Location = new System.Drawing.Point(16, 188);
             this.lblReverse.Name = "lblReverse";
-            this.lblReverse.Size = new System.Drawing.Size(65, 17);
+            this.lblReverse.Size = new System.Drawing.Size(76, 20);
             this.lblReverse.TabIndex = 15;
             this.lblReverse.Text = "Reverse:";
             // 
@@ -331,18 +338,18 @@
             this.lblTrack.BackColor = System.Drawing.Color.Transparent;
             this.lblTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrack.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblTrack.Location = new System.Drawing.Point(11, 79);
-            this.lblTrack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTrack.Location = new System.Drawing.Point(15, 97);
             this.lblTrack.Name = "lblTrack";
-            this.lblTrack.Size = new System.Drawing.Size(84, 17);
+            this.lblTrack.Size = new System.Drawing.Size(100, 20);
             this.lblTrack.TabIndex = 16;
             this.lblTrack.Text = "Set track to:";
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(232, 242);
+            this.btnAbout.Location = new System.Drawing.Point(309, 298);
+            this.btnAbout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(75, 23);
+            this.btnAbout.Size = new System.Drawing.Size(100, 28);
             this.btnAbout.TabIndex = 17;
             this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = true;
@@ -350,9 +357,10 @@
             // 
             // btnGithub
             // 
-            this.btnGithub.Location = new System.Drawing.Point(313, 242);
+            this.btnGithub.Location = new System.Drawing.Point(417, 298);
+            this.btnGithub.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGithub.Name = "btnGithub";
-            this.btnGithub.Size = new System.Drawing.Size(75, 23);
+            this.btnGithub.Size = new System.Drawing.Size(100, 28);
             this.btnGithub.TabIndex = 18;
             this.btnGithub.Text = "Github";
             this.btnGithub.UseVisualStyleBackColor = true;
@@ -360,21 +368,62 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(394, 242);
+            this.btnClose.Location = new System.Drawing.Point(525, 298);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(100, 28);
             this.btnClose.TabIndex = 19;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnFacebook
+            // 
+            this.btnFacebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFacebook.BackgroundImage")));
+            this.btnFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacebook.Location = new System.Drawing.Point(506, 5);
+            this.btnFacebook.Name = "btnFacebook";
+            this.btnFacebook.Size = new System.Drawing.Size(40, 40);
+            this.btnFacebook.TabIndex = 20;
+            this.btnFacebook.UseVisualStyleBackColor = true;
+            this.btnFacebook.Click += new System.EventHandler(this.btnFacebook_Click);
+            // 
+            // btnYoutube
+            // 
+            this.btnYoutube.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnYoutube.BackgroundImage")));
+            this.btnYoutube.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnYoutube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYoutube.Location = new System.Drawing.Point(552, 5);
+            this.btnYoutube.Name = "btnYoutube";
+            this.btnYoutube.Size = new System.Drawing.Size(40, 40);
+            this.btnYoutube.TabIndex = 21;
+            this.btnYoutube.UseVisualStyleBackColor = true;
+            this.btnYoutube.Click += new System.EventHandler(this.btnYoutube_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Location = new System.Drawing.Point(598, 6);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(40, 40);
+            this.btnHelp.TabIndex = 22;
+            this.btnHelp.Text = "?";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(481, 281);
+            this.ClientSize = new System.Drawing.Size(641, 346);
+            this.Controls.Add(this.btnHelp);
+            this.Controls.Add(this.btnYoutube);
+            this.Controls.Add(this.btnFacebook);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnGithub);
             this.Controls.Add(this.btnAbout);
@@ -395,7 +444,7 @@
             this.Controls.Add(this.lblAvailable);
             this.Controls.Add(this.btnActivate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "NFS Underground Race Trainer ";
@@ -432,6 +481,9 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnGithub;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnFacebook;
+        private System.Windows.Forms.Button btnYoutube;
+        private System.Windows.Forms.Button btnHelp;
     }
 }
 

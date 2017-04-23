@@ -217,12 +217,27 @@ namespace NFS_Underground_Race_Trainer
 
         private void btnGithub_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/BojanV03/NFSU-Race-Trainer");
+            System.Diagnostics.Process.Start("https://goo.gl/1ESCJM");
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thanks");
+            MessageBox.Show("Made by BojanV03 for Need for Speed Underground v1.4. \n\nFind more trainers/contact me on my youtube/facebook by clicking the buttons in the top right corner", "About");
+        }
+        
+        private void btnFacebook_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://goo.gl/Jh0YF2");
+        }
+
+        private void btnYoutube_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://goo.gl/Hm3LNy");
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Just start the game, activate the trainer and setup it up as you wish and enter any race(either quick race or free roam) in the game", "Help");
         }
     }
 }
