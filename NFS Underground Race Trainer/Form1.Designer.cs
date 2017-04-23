@@ -221,6 +221,7 @@
             // 
             // numTimeHours
             // 
+            this.numTimeHours.Enabled = false;
             this.numTimeHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTimeHours.Location = new System.Drawing.Point(12, 242);
             this.numTimeHours.Maximum = new decimal(new int[] {
@@ -239,6 +240,7 @@
             // 
             // numTimeMinutes
             // 
+            this.numTimeMinutes.Enabled = false;
             this.numTimeMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTimeMinutes.Location = new System.Drawing.Point(69, 242);
             this.numTimeMinutes.Maximum = new decimal(new int[] {
@@ -257,6 +259,7 @@
             // 
             // numTimeSeconds
             // 
+            this.numTimeSeconds.Enabled = false;
             this.numTimeSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTimeSeconds.Location = new System.Drawing.Point(123, 242);
             this.numTimeSeconds.Maximum = new decimal(new int[] {
@@ -343,6 +346,7 @@
             this.btnAbout.TabIndex = 17;
             this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnGithub
             // 
@@ -394,7 +398,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "NFSU2 ";
+            this.Text = "NFS Underground Race Trainer ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numLapCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTimeHours)).EndInit();

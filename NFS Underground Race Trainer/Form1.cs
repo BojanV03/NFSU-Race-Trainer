@@ -219,5 +219,10 @@ namespace NFS_Underground_Race_Trainer
         {
             System.Diagnostics.Process.Start("https://github.com/BojanV03/NFSU-Race-Trainer");
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thanks");
+        }
     }
 }
